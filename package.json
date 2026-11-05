@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "express": "^5.3.0",
-    "mysql2": "^3.24.6"
+    "mysql2": "^3.24.6",
+    "sequelize": "^6.37.8"
   },
   "name": "studentmanagementapi",
   "version": "1.0.0",
