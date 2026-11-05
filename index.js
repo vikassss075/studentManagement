@@ -7,4 +7,9 @@ const studentRouter = require('./routes/studentRoutes');
 
 app.use('/students', studentRouter);
 
-app.listen(3000);
+db.sync({force:false}).then(()=>{
+    app.listen(3000);
+}).catch((err)=>{
+    console.log(err);
+})
+

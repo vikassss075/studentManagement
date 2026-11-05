@@ -1,27 +1,21 @@
 const {Sequelize} = require('sequelize');
-
-const sequelize = new Sequelize('testDB2', 'root', 'mypass', {
+const sequelize = new Sequelize('testDB2', 'root', 'Full$Moon@2000', {
     host: 'localhost',
     dialect: 'mysql'
 });
 
-(async  ()=>{ try{
-    await sequelize.authenticate();
-    console.log('connection to the Database has been created');
-}catch(error){
-    console.log(error);
-} })();
+(async ()=>{
+    try{
+        
+        await sequelize.authenticate();
+        console.log("Connection to the Database has been created");
+    }catch(error){
+        console.log(error);
+    }
+})();
 
 
 module.exports = sequelize;
-
-
-
-
-
-
-
-
 
 
 
